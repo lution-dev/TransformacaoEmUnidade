@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-montserrat font-bold mb-4">Transformação em Unidade</h3>
             <p className="mb-4">Um livro de Renata Rodrigues</p>
-            <p className="text-sm text-gray-400">© 2023 Todos os direitos reservados.</p>
+            <p className="text-sm text-gray-400">© {new Date().getFullYear()} Todos os direitos reservados.</p>
           </div>
           
           <div>
