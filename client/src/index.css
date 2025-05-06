@@ -93,4 +93,31 @@
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  
+  /* 3D Book Mockup Styles */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .rotate-y-5 {
+    transform: rotateY(5deg);
+  }
+  
+  .book-cover {
+    position: relative;
+    z-index: 20;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: transform 0.5s ease;
+  }
+  
+  .book-spine {
+    z-index: 10;
+    transform-style: preserve-3d;
+  }
+  
+  .book-pages {
+    z-index: 5;
+    transform-style: preserve-3d;
+  }
 }

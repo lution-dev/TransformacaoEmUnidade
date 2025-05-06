@@ -104,11 +104,20 @@ const HeroSection: React.FC = () => {
           </div>
           
           <div className="flex justify-center md:justify-end fade-in">
-            <img 
-              src="/attached_assets/image_1746546856321.png" 
-              alt="Livro Transformação em Unidade" 
-              className="w-3/4 md:w-full max-w-md rounded-xl shadow-2xl transform rotate-3 hover:rotate-0 transition duration-500" 
-            />
+            <div className="relative w-3/4 md:w-full max-w-md">
+              {/* 3D Book Mockup Effect */}
+              <div className="relative transform perspective-1000 hover:rotate-y-5 transition-all duration-500 ease-in-out">
+                <div className="book-spine absolute left-0 top-0 h-full w-[20px] bg-gradient-to-r from-purple-900 to-purple-800 transform -skew-y-12 origin-top"></div>
+                <div className="book-cover">
+                  <img 
+                    src="/attached_assets/image_1746546856321.png" 
+                    alt="Livro Transformação em Unidade" 
+                    className="w-full rounded-r-lg rounded-b-lg shadow-2xl transform hover:scale-105 transition duration-500" 
+                  />
+                </div>
+                <div className="book-pages absolute left-[18px] top-1 bottom-1 w-[10px] bg-gray-100 rounded-r-sm transform -skew-y-12 origin-top"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
