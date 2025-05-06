@@ -1,4 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="50" fill="#6d28d9" />
-  <text x="50" y="70" font-family="Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="white">TU</text>
+  <!-- Gradiente roxo e rosa para o fundo -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6d28d9" /> <!-- roxo escuro -->
+      <stop offset="100%" stop-color="#ec4899" /> <!-- rosa -->
+    </linearGradient>
+  </defs>
+  
+  <!-- Círculo de fundo com cantos suavizados -->
+  <circle cx="50" cy="50" r="48" fill="url(#bg-gradient)" />
+  
+  <!-- Texto "TU" em branco -->
+  <text x="50" y="65" font-family="Montserrat, Arial, sans-serif" font-size="40" font-weight="bold" text-anchor="middle" fill="white">TU</text>
+  
+  <!-- Anel decorativo -->
+  <circle cx="50" cy="50" r="48" fill="none" stroke="white" stroke-width="2.5" stroke-opacity="0.3" />
 </svg>
