@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PAYMENT_LINK } from '@/lib/constants';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
@@ -9,6 +9,29 @@ const Navbar: React.FC = () => {
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
+  
+  // Função para rolagem suave para seções
+  const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string) => {
+    e.preventDefault();
+    
+    const section = document.getElementById(sectionId);
+    if (section) {
+      // Fechar menu móvel se estiver aberto
+      setIsMobileMenuOpen(false);
+      
+      // Animação de rolagem suave
+      section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+      
+      // Destacar a seção atual na navegação (opcional)
+      const links = document.querySelectorAll('nav a');
+      links.forEach(link => link.classList.remove('text-secondary'));
+      const activeLink = document.querySelector(`nav a[href="#${sectionId}"]`);
+      if (activeLink) activeLink.classList.add('text-secondary');
+    }
+  };
 
   return (
     <header className="fixed w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
@@ -18,11 +41,11 @@ const Navbar: React.FC = () => {
         </div>
         
         <nav className="hidden md:flex space-x-6">
-          <a href="#beneficios" className="font-montserrat font-medium hover:text-secondary transition">Benefícios</a>
-          <a href="#sobre" className="font-montserrat font-medium hover:text-secondary transition">Sobre o Livro</a>
-          <a href="#autora" className="font-montserrat font-medium hover:text-secondary transition">Autora</a>
-          <a href="#depoimentos" className="font-montserrat font-medium hover:text-secondary transition">Depoimentos</a>
-          <a href="#faq" className="font-montserrat font-medium hover:text-secondary transition">FAQ</a>
+          <a href="#beneficios" onClick={(e) => scrollToSection(e, 'beneficios')} className="font-montserrat font-medium hover:text-secondary transition">Benefícios</a>
+          <a href="#sobre" onClick={(e) => scrollToSection(e, 'sobre')} className="font-montserrat font-medium hover:text-secondary transition">Sobre o Livro</a>
+          <a href="#autora" onClick={(e) => scrollToSection(e, 'autora')} className="font-montserrat font-medium hover:text-secondary transition">Autora</a>
+          <a href="#depoimentos" onClick={(e) => scrollToSection(e, 'depoimentos')} className="font-montserrat font-medium hover:text-secondary transition">Depoimentos</a>
+          <a href="#faq" onClick={(e) => scrollToSection(e, 'faq')} className="font-montserrat font-medium hover:text-secondary transition">FAQ</a>
         </nav>
         
         <a 
@@ -47,35 +70,35 @@ const Navbar: React.FC = () => {
           <a 
             href="#beneficios" 
             className="font-montserrat font-medium hover:text-secondary transition py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => scrollToSection(e, 'beneficios')}
           >
             Benefícios
           </a>
           <a 
             href="#sobre" 
             className="font-montserrat font-medium hover:text-secondary transition py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => scrollToSection(e, 'sobre')}
           >
             Sobre o Livro
           </a>
           <a 
             href="#autora" 
             className="font-montserrat font-medium hover:text-secondary transition py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => scrollToSection(e, 'autora')}
           >
             Autora
           </a>
           <a 
             href="#depoimentos" 
             className="font-montserrat font-medium hover:text-secondary transition py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => scrollToSection(e, 'depoimentos')}
           >
             Depoimentos
           </a>
           <a 
             href="#faq" 
             className="font-montserrat font-medium hover:text-secondary transition py-2"
-            onClick={() => setIsMobileMenuOpen(false)}
+            onClick={(e) => scrollToSection(e, 'faq')}
           >
             FAQ
           </a>
