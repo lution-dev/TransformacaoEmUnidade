@@ -24,19 +24,19 @@ const AuthorSection: React.FC = () => {
             
             <div className="space-y-4 text-gray-700">
               <p>
-                Renata Rodrigues é especialista em transformação pessoal, combinando conhecimentos de espiritualidade, saúde integral e desenvolvimento humano.
+                Renata Rodrigues é cristã, terapeuta emocional, consultora financeira e palestrante com uma missão clara: ajudar pessoas a encontrarem equilíbrio e transformação em suas vidas.
               </p>
               
               <p>
-                Com mais de 15 anos de experiência ajudando pessoas a encontrarem equilíbrio e propósito, Renata desenvolveu o método "Transformação em Unidade" após sua própria jornada de superação e descobertas.
+                Formada em Ciências Contábeis pela Faculdade Fundação Santo André, no ABC Paulista, há 15 anos, Renata construiu uma sólida carreira como Consultora Financeira, utilizando seu conhecimento para ajudar pessoas não apenas com finanças, mas também com as emoções associadas ao dinheiro.
               </p>
               
               <p>
-                Formada em Psicologia e com especializações em Nutrição Comportamental e Teologia, ela oferece uma perspectiva única que integra ciência e espiritualidade para uma vida plena.
+                Por 13 anos, atuou em uma instituição financeira, onde descobriu seu dom especial: saber ouvir e aconselhar. Sua paixão por ajudar cresceu tanto que decidiu se especializar, tornando-se Terapeuta Emocional, formada pela TRG há 2 anos.
               </p>
               
               <p>
-                Já impactou mais de 20.000 pessoas através de seus livros, palestras e programas de coaching.
+                Desde 2024, Renata cumpre a missão que Deus lhe confiou através do Projeto "Transformação em Unidade", ajudando pessoas a libertarem-se da compulsão alimentar, descobrindo as raízes emocionais de seus traumas e transformando-se de dentro para fora.
               </p>
             </div>
             
@@ -73,7 +73,7 @@ const AuthorSection: React.FC = () => {
             </div>
             
             <blockquote className="mt-8 border-l-4 border-secondary pl-4 italic text-gray-600">
-              "Minha missão é ajudar você a descobrir que a verdadeira transformação começa de dentro para fora, unindo seu ser em completa harmonia como foi planejado."
+              "Você está prestes a viver uma grande mudança em sua vida! Não permita ser roubado de viver essa transformação. Minha missão é caminhar com quem precisa recomeçar, mostrando que é possível viver uma vida leve, curada e cheia de significado."
             </blockquote>
           </div>
         </div>

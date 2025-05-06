@@ -8,9 +8,9 @@ const AboutSection: React.FC = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="order-2 md:order-1">
-            <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">21 Dias de Jornada Transformadora</h2>
+            <h2 className="text-3xl md:text-4xl font-montserrat font-bold mb-6">21 Dias de Transformação de Dentro para Fora</h2>
             <p className="text-lg mb-6">
-              O livro <span className="font-bold text-accent">Transformação em Unidade</span> oferece um programa prático de 21 dias para transformar completamente sua vida, focando nos três pilares fundamentais:
+              O livro <span className="font-bold text-accent">Transformação em Unidade</span> oferece um programa prático de 21 dias cuidadosamente planejado para transformar completamente sua vida. O projeto foi estruturado para ajudar você a encontrar o equilíbrio entre os três pilares fundamentais do seu ser:
             </p>
             
             <div className="space-y-4 mb-8">
@@ -20,7 +20,7 @@ const AboutSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-montserrat font-bold text-lg">Espírito</h3>
-                  <p>Fortaleça sua conexão espiritual e encontre propósito e direção para sua vida.</p>
+                  <p>Fortaleça sua conexão espiritual, aprenda a investir no tempo ministerial e com Deus, descobrindo um novo propósito para sua vida.</p>
                 </div>
               </div>
               
@@ -30,7 +30,7 @@ const AboutSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-montserrat font-bold text-lg">Alma</h3>
-                  <p>Renove sua mente, emoções e vontade para alinhar-se com uma vida plena.</p>
+                  <p>Renove sua mente, emoções e vontade, encontrando raizes de traumas e descobrindo uma nova relação com a comida e com as pessoas.</p>
                 </div>
               </div>
               
@@ -40,13 +40,13 @@ const AboutSection: React.FC = () => {
                 </div>
                 <div>
                   <h3 className="font-montserrat font-bold text-lg">Corpo</h3>
-                  <p>Aprenda a cuidar do seu templo físico e desenvolva hábitos saudáveis duradouros.</p>
+                  <p>Aprenda a cuidar adequadamente do seu templo físico, recobrando energia e vitalidade, com orientações nutricionais completas e práticas.</p>
                 </div>
               </div>
             </div>
             
             <p className="mb-8">
-              Cada dia do programa oferece reflexões, passagens inspiradoras, exercícios práticos e orientações específicas para ajudá-lo a implementar mudanças significativas em todas as áreas da sua vida.
+              Os próximos capítulos são essenciais para você começar os 21 dias preparados. O livro traz todas as informações necessárias sobre as fases do projeto, dias de jejum, alimentos a retirar, dicas de compras e muito mais. Cada dia oferece reflexões, passagens inspiradoras e exercícios práticos para você implementar mudanças significativas que trazem equilíbrio para todas as áreas da sua vida.
             </p>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 mb-8">
@@ -54,19 +54,23 @@ const AboutSection: React.FC = () => {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <Check className="text-accent mr-2 h-5 w-5" />
-                  <span>Abordagem holística que trata a pessoa por completo</span>
+                  <span>Abordagem holística que equilibra espírito, alma e corpo</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="text-accent mr-2 h-5 w-5" />
-                  <span>Fundamentado em princípios espirituais e científicos</span>
+                  <span>Fundamentado em princípios espirituais cristãos</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="text-accent mr-2 h-5 w-5" />
-                  <span>Método passo a passo fácil de implementar</span>
+                  <span>Orientações detalhadas sobre jejum e alimentação</span>
                 </li>
                 <li className="flex items-center">
                   <Check className="text-accent mr-2 h-5 w-5" />
-                  <span>Resultados comprovados por centenas de leitores</span>
+                  <span>Ajuda você a superar a compulsão alimentar</span>
+                </li>
+                <li className="flex items-center">
+                  <Check className="text-accent mr-2 h-5 w-5" />
+                  <span>Resultados comprovados com perda de peso e mais disposição</span>
                 </li>
               </ul>
             </div>
