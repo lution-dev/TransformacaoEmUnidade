@@ -8,7 +8,7 @@ const BottomCTA: React.FC = () => {
         href={PAYMENT_LINK} 
         className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-6 py-3 rounded-full inline-block w-full text-center shadow-md transition"
       >
-        Comprar por R$9,00
+        Comprar por R$39,90
       </a>
     </div>
   );

@@ -11,7 +11,7 @@ import {
 const faqs = [
   {
     question: "Como o livro é entregue?",
-    answer: "O livro \"Transformação em Unidade\" é entregue em formato digital (PDF, ePub e Kindle) para leitura em qualquer dispositivo. Após a compra, você receberá um e-mail com instruções para acessar sua área de membros onde poderá baixar o material."
+    answer: "O livro \"Transformação em Unidade\" é entregue exclusivamente em formato digital (PDF, ePub e Kindle) através da plataforma Hotmart. Após a compra, você receberá imediatamente um e-mail da Hotmart com instruções para acessar sua área de membros, onde poderá baixar o material e acessar em qualquer dispositivo. Não há versão física do livro."
   },
   {
     question: "Quanto tempo leva para ver resultados?",
@@ -64,9 +64,9 @@ const FAQSection: React.FC = () => {
             href={PAYMENT_LINK} 
             className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-8 py-4 rounded-full inline-block transition shadow-md hover:shadow-lg"
           >
-            Adquirir Agora Por Apenas R$9,00
+            Adquirir Agora Por Apenas R$39,90
           </a>
-          <p className="mt-4 text-gray-600">Oferta por tempo limitado - Preço original: R$47,00</p>
+          <p className="mt-4 text-gray-600">Oferta por tempo limitado - Preço original: R$97,00</p>
         </div>
       </div>
     </section>

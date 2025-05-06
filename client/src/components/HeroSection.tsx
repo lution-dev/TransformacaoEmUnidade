@@ -94,8 +94,8 @@ const HeroSection: React.FC = () => {
             <div className="mt-8">
               <div className="text-sm font-bold uppercase tracking-wider mb-2">Promoção especial:</div>
               <div className="flex items-center">
-                <div className="text-2xl font-montserrat font-bold line-through mr-3 text-gray-300">R$47,00</div>
-                <div className="text-3xl font-montserrat font-bold text-accent">R$9,00</div>
+                <div className="text-2xl font-montserrat font-bold line-through mr-3 text-gray-300">R$97,00</div>
+                <div className="text-3xl font-montserrat font-bold text-accent">R$39,90</div>
               </div>
               <div className="mt-2 text-sm font-semibold">
                 Oferta expira em: <strong>{countdown.hours}h {countdown.minutes}m {countdown.seconds}s</strong>
