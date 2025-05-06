@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Gradiente de fundo -->
+  <defs>
+    <linearGradient id="background-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4338ca" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fundo -->
+  <rect width="1200" height="630" fill="url(#background-gradient)" />
+  
+  <!-- Efeitos de fundo - círculos e elipses -->
+  <circle cx="100" cy="100" r="80" fill="#7e22ce" opacity="0.2" />
+  <circle cx="1100" cy="500" r="120" fill="#4338ca" opacity="0.2" />
+  <ellipse cx="600" cy="50" rx="400" ry="100" fill="#7e22ce" opacity="0.1" />
+  
+  <!-- Área de conteúdo principal -->
+  <g transform="translate(600, 315)" text-anchor="middle">
+    <!-- Título principal -->
+    <text font-family="Arial, sans-serif" font-weight="900" font-size="60" fill="white">
+      <tspan x="0" y="-100">TRANSFORMAÇÃO</tspan>
+      <tspan x="0" y="-30">EM UNIDADE</tspan>
+    </text>
+    
+    <!-- Subtítulo -->
+    <text font-family="Arial, sans-serif" font-weight="400" font-size="32" fill="white" opacity="0.9">
+      <tspan x="0" y="30">Encontre o equilíbrio para uma vida plena</tspan>
+    </text>
+    
+    <!-- Autor -->
+    <text font-family="Arial, sans-serif" font-weight="400" font-size="26" fill="white" opacity="0.8">
+      <tspan x="0" y="80">por Renata Rodrigues</tspan>
+    </text>
+    
+    <!-- Programa de 21 dias -->
+    <text font-family="Arial, sans-serif" font-weight="700" font-size="30" fill="#fcd34d">
+      <tspan x="0" y="140">Programa de 21 dias</tspan>
+    </text>
+  </g>
+  
+  <!-- Borboleta (símbolo de transformação) -->
+  <g transform="translate(150, 400)">
+    <path d="M41.8,39.5c4-4.3,6-9.9,7.3-12.3c-2.1,0.8-5.3,2.5-6.5,4.3c0.2-3-1.3-6.9-3.2-9.9c0.7,3.2,0.6,7.5-0.2,10.4
+            c-1.3-2.3-4.3-4.1-7.2-5.2c2.2,1.7,4.9,4.5,5.2,7.3c-1.6-0.8-5.5-0.6-8.3-0.2c2.9,0.5,6.5,1.7,8.2,3.2c-1.7,0.7-4.9,3.1-6.6,5.2
+            c2.5-1.3,5.8-2.3,8.4-2.3c-0.1,2.2-1.6,5.7-3,8c1.7-1.6,4.1-4.8,4.7-7.1L41.8,39.5z" fill="white" transform="scale(2)" />
+  </g>
+  
+  <g transform="translate(1050, 400)">
+    <path d="M22.2,24.5c-4,4.3-6,9.9-7.3,12.3c2.1-0.8,5.3-2.5,6.5-4.3c-0.2,3,1.3,6.9,3.2,9.9c-0.7-3.2-0.6-7.5,0.2-10.4
+            c1.3,2.3,4.3,4.1,7.2,5.2c-2.2-1.7-4.9-4.5-5.2-7.3c1.6,0.8,5.5,0.6,8.3,0.2c-2.9-0.5-6.5-1.7-8.2-3.2c1.7-0.7,4.9-3.1,6.6-5.2
+            c-2.5,1.3-5.8,2.3-8.4,2.3c0.1-2.2,1.6-5.7,3-8c-1.7,1.6-4.1,4.8-4.7,7.1L22.2,24.5z" fill="white" transform="scale(2)" />
+  </g>
+  
+  <!-- Preço e chamada para ação -->
+  <g transform="translate(600, 550)" text-anchor="middle">
+    <!-- Preço -->
+    <text font-family="Arial, sans-serif" font-weight="700" font-size="36" fill="white">
+      <tspan x="0" y="0">R$39,90</tspan>
+    </text>
+  </g>
+</svg>
