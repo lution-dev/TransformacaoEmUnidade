@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-montserrat font-bold mb-4">Contato</h3>
             <p className="mb-2">Dúvidas ou suporte? Entre em contato:</p>
-            <p className="mb-4">suporte@transformacaoemunidade.com.br</p>
+            <p className="mb-4">re_renata@icloud.com</p>
             <div className="flex space-x-4">
               <a href="#" className="text-xl hover:text-secondary transition" aria-label="Instagram">
                 <Instagram />
