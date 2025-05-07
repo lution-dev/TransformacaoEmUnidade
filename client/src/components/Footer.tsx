@@ -26,15 +26,15 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-montserrat font-bold mb-4">Contato</h3>
             <p className="mb-2">Dúvidas ou suporte? Entre em contato:</p>
-            <p className="mb-4">re_renata@icloud.com</p>
+            <a href="mailto:re_renata@icloud.com" className="mb-4 block hover:text-secondary transition">re_renata@icloud.com</a>
             <div className="flex space-x-4">
-              <a href="#" className="text-xl hover:text-secondary transition" aria-label="Instagram">
+              <a href="https://www.instagram.com/renatarodrigues_oficiall" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-secondary transition" aria-label="Instagram">
                 <Instagram />
               </a>
-              <a href="#" className="text-xl hover:text-secondary transition" aria-label="Facebook">
-                <Facebook />
+              <a href="https://www.tiktok.com/@renatarodriguesilva" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-secondary transition" aria-label="TikTok">
+                <Youtube />
               </a>
-              <a href="#" className="text-xl hover:text-secondary transition" aria-label="YouTube">
+              <a href="https://www.youtube.com/@RenataRodriguesOficiall" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-secondary transition" aria-label="YouTube">
                 <Youtube />
               </a>
             </div>
