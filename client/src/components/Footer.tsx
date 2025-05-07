@@ -1,5 +1,6 @@
 import React from 'react';
-import { Instagram, Facebook, Youtube } from 'lucide-react';
+import { Instagram, Youtube } from 'lucide-react';
+import { BsTiktok } from 'react-icons/bs';
 
 const Footer: React.FC = () => {
   return (
@@ -32,7 +33,7 @@ const Footer: React.FC = () => {
                 <Instagram />
               </a>
               <a href="https://www.tiktok.com/@renatarodriguesilva" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-secondary transition" aria-label="TikTok">
-                <Youtube />
+                <BsTiktok />
               </a>
               <a href="https://www.youtube.com/@RenataRodriguesOficiall" target="_blank" rel="noopener noreferrer" className="text-xl hover:text-secondary transition" aria-label="YouTube">
                 <Youtube />
