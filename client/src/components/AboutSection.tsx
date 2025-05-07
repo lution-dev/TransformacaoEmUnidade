@@ -291,165 +291,82 @@ const AboutSection: React.FC = () => {
                 })}
               </motion.svg>
               
-              {/* Versão mobile simplificada */}
-              <motion.svg 
-                viewBox="0 0 300 300" 
-                xmlns="http://www.w3.org/2000/svg"
-                className="md:hidden w-full h-[250px]"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
+              {/* Versão mobile simplificada - muito mais simples, mais parecida com a imagem compartilhada */}
+              <motion.div 
+                className="md:hidden w-full h-full flex flex-col items-center justify-center bg-gradient-to-br from-purple-100 to-teal-100 rounded-xl p-4 mt-4"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
               >
-                {/* Fundo gradiente circular */}
-                <defs>
-                  <radialGradient id="circleGradient" cx="50%" cy="50%" r="50%">
-                    <stop offset="10%" stopColor="#BEFF00" stopOpacity="0.2" />
-                    <stop offset="95%" stopColor="#5B2C91" stopOpacity="0.05" />
-                  </radialGradient>
-                </defs>
-                
-                <motion.circle
-                  cx="150"
-                  cy="150"
-                  r="140"
-                  fill="url(#circleGradient)"
+                <motion.div 
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
-                  transition={{ duration: 0.5 }}
-                />
-                
-                {/* Triângulo representando os 3 pilares: espírito, alma e corpo */}
-                <motion.path
-                  d="M150,30 L270,210 L30,210 Z"
-                  fill="none"
-                  stroke="#5B2C91"
-                  strokeWidth="3"
-                  strokeDasharray="8 4"
-                  initial={{ pathLength: 0 }}
-                  animate={{ pathLength: 1 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                />
-                
-                {/* Os três círculos nos vértices do triângulo */}
-                <motion.circle
-                  cx="150" cy="30" r="15"
-                  fill="#1DD3B0"
-                  opacity="0.8"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.3, delay: 0.8 }}
-                />
-                <motion.text
-                  x="150" y="35"
-                  fontSize="12"
-                  textAnchor="middle"
-                  fill="white"
-                  fontWeight="bold"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3, delay: 1 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  className="w-64 h-64 relative flex items-center justify-center"
                 >
-                  ESPÍRITO
-                </motion.text>
+                  {/* Círculo principal */}
+                  <motion.div 
+                    className="absolute w-full h-full rounded-full border-2 border-purple-600 border-dashed"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.3 }}
+                  />
+                  
+                  {/* Pontos ao redor do círculo */}
+                  {Array.from({ length: 8 }).map((_, i) => {
+                    const angle = (i * 45 * Math.PI) / 180;
+                    const x = 32 + 28 * Math.cos(angle); // porcentagem da posição
+                    const y = 32 + 28 * Math.sin(angle); // porcentagem da posição
+                    return (
+                      <motion.div 
+                        key={i}
+                        className="absolute w-2 h-2 rounded-full bg-lime-400"
+                        style={{ left: `${x}%`, top: `${y}%` }}
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ duration: 0.2, delay: 0.5 + (i * 0.1) }}
+                      />
+                    );
+                  })}
+                  
+                  {/* Título central */}
+                  <motion.div 
+                    className="text-center"
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.8 }}
+                  >
+                    <motion.div className="text-2xl font-bold text-purple-800">
+                      21 DIAS
+                    </motion.div>
+                    <motion.div 
+                      className="text-teal-500 font-bold mt-2"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 1 }}
+                    >
+                      TRANSFORMAÇÃO
+                    </motion.div>
+                    <motion.div 
+                      className="text-purple-600 font-bold"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: 1.2 }}
+                    >
+                      EM UNIDADE
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
                 
-                <motion.circle
-                  cx="30" cy="210" r="15"
-                  fill="#4B3A95"
-                  opacity="0.8"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.3, delay: 1 }}
-                />
-                <motion.text
-                  x="30" y="215"
-                  fontSize="12"
-                  textAnchor="middle"
-                  fill="white"
-                  fontWeight="bold"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3, delay: 1.2 }}
-                >
-                  ALMA
-                </motion.text>
-                
-                <motion.circle
-                  cx="270" cy="210" r="15"
-                  fill="#BEFF00"
-                  opacity="0.8"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.3, delay: 1.2 }}
-                />
-                <motion.text
-                  x="270" y="215"
-                  fontSize="12"
-                  textAnchor="middle"
-                  fill="#333"
-                  fontWeight="bold"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.3, delay: 1.4 }}
-                >
-                  CORPO
-                </motion.text>
-                
-                {/* Centro do diagrama */}
-                <motion.circle
-                  cx="150" cy="150" r="25"
-                  fill="#5B2C91"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 1.4 }}
-                />
-                
-                {/* Borboleta simplificada */}
-                <motion.g
-                  transform="translate(150, 150) scale(0.4)"
-                  initial={{ opacity: 0, rotate: -20 }}
-                  animate={{ opacity: 1, rotate: 0 }}
-                  transition={{ duration: 0.8, delay: 1.6 }}
-                >
-                  <path d="M0,0 C-50,-30 -100,-10 -80,40 C-70,80 -30,100 0,80 C30,100 70,80 80,40 C100,-10 50,-30 0,0" fill="#1DD3B0" opacity="0.9" />
-                  <line x1="0" y1="-10" x2="0" y2="90" stroke="white" strokeWidth="3" />
-                </motion.g>
-                
-                {/* Texto central */}
-                <motion.text
-                  x="150" y="250"
-                  fontSize="24"
-                  textAnchor="middle"
-                  fill="#5B2C91"
-                  fontWeight="bold"
+                <motion.p 
+                  className="mt-4 text-center text-purple-900 font-semibold"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1.8 }}
+                  transition={{ duration: 0.5, delay: 1.3 }}
                 >
-                  21 DIAS
-                </motion.text>
-                
-                <motion.text
-                  x="150" y="275"
-                  fontSize="16"
-                  textAnchor="middle"
-                  fill="#5B2C91"
-                  fontWeight="bold"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 2 }}
-                >
-                  DE TRANSFORMAÇÃO
-                </motion.text>
-              </motion.svg>
-              
-              <motion.p 
-                className="mt-4 text-center text-purple-900 font-semibold px-2"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 2 }}
-              >
-                Uma jornada de transformação para seu espírito, alma e corpo
-              </motion.p>
+                  Uma jornada de transformação para seu espírito, alma e corpo
+                </motion.p>
+              </motion.div>
             </motion.div>
           </AnimatedElement>
         </div>
