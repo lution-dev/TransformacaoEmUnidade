@@ -1,6 +1,9 @@
 import React from 'react';
 import { PAYMENT_LINK } from '@/lib/constants';
 import { Check, Bath, Brain, Heart } from 'lucide-react';
+import AnimatedElement from '@/components/AnimatedElement';
+import { motion } from 'framer-motion';
+import { fadeInUp, fadeInLeft, fadeInRight, buttonAnimation, imageAnimation } from '@/components/animations';
 
 const AboutSection: React.FC = () => {
   return (
