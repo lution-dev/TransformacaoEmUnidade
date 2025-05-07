@@ -155,18 +155,18 @@ const AboutSection: React.FC = () => {
           
           <AnimatedElement variants={imageAnimation} delay={0.3} className="order-1 md:order-2 flex justify-center">
             <motion.div 
-              className="rounded-xl shadow-2xl max-w-full w-full max-w-[400px] p-6 bg-gradient-to-br from-purple-100/80 to-teal-100/80 flex flex-col items-center justify-center"
+              className="rounded-xl shadow-2xl w-full max-w-full md:max-w-[400px] p-4 md:p-6 bg-gradient-to-br from-purple-100/80 to-teal-100/80 flex flex-col items-center justify-center"
               whileHover={{ 
                 y: -5,
                 boxShadow: "0 25px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
                 transition: { duration: 0.4 } 
               }}
             >
-              {/* SVG ilustrativo da jornada de transformação */}
+              {/* SVG ilustrativo da jornada de transformação - Versão Desktop */}
               <motion.svg 
                 viewBox="0 0 500 500" 
                 xmlns="http://www.w3.org/2000/svg"
-                className="w-full max-w-[350px]"
+                className="hidden md:block w-full max-w-[350px]"
                 initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -290,8 +290,160 @@ const AboutSection: React.FC = () => {
                   );
                 })}
               </motion.svg>
+              
+              {/* Versão mobile simplificada */}
+              <motion.svg 
+                viewBox="0 0 300 300" 
+                xmlns="http://www.w3.org/2000/svg"
+                className="md:hidden w-full h-[250px]"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                {/* Fundo gradiente circular */}
+                <defs>
+                  <radialGradient id="circleGradient" cx="50%" cy="50%" r="50%">
+                    <stop offset="10%" stopColor="#BEFF00" stopOpacity="0.2" />
+                    <stop offset="95%" stopColor="#5B2C91" stopOpacity="0.05" />
+                  </radialGradient>
+                </defs>
+                
+                <motion.circle
+                  cx="150"
+                  cy="150"
+                  r="140"
+                  fill="url(#circleGradient)"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                />
+                
+                {/* Triângulo representando os 3 pilares: espírito, alma e corpo */}
+                <motion.path
+                  d="M150,30 L270,210 L30,210 Z"
+                  fill="none"
+                  stroke="#5B2C91"
+                  strokeWidth="3"
+                  strokeDasharray="8 4"
+                  initial={{ pathLength: 0 }}
+                  animate={{ pathLength: 1 }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                />
+                
+                {/* Os três círculos nos vértices do triângulo */}
+                <motion.circle
+                  cx="150" cy="30" r="15"
+                  fill="#1DD3B0"
+                  opacity="0.8"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3, delay: 0.8 }}
+                />
+                <motion.text
+                  x="150" y="35"
+                  fontSize="12"
+                  textAnchor="middle"
+                  fill="white"
+                  fontWeight="bold"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: 1 }}
+                >
+                  ESPÍRITO
+                </motion.text>
+                
+                <motion.circle
+                  cx="30" cy="210" r="15"
+                  fill="#4B3A95"
+                  opacity="0.8"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3, delay: 1 }}
+                />
+                <motion.text
+                  x="30" y="215"
+                  fontSize="12"
+                  textAnchor="middle"
+                  fill="white"
+                  fontWeight="bold"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: 1.2 }}
+                >
+                  ALMA
+                </motion.text>
+                
+                <motion.circle
+                  cx="270" cy="210" r="15"
+                  fill="#BEFF00"
+                  opacity="0.8"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.3, delay: 1.2 }}
+                />
+                <motion.text
+                  x="270" y="215"
+                  fontSize="12"
+                  textAnchor="middle"
+                  fill="#333"
+                  fontWeight="bold"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: 1.4 }}
+                >
+                  CORPO
+                </motion.text>
+                
+                {/* Centro do diagrama */}
+                <motion.circle
+                  cx="150" cy="150" r="25"
+                  fill="#5B2C91"
+                  initial={{ scale: 0 }}
+                  animate={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 1.4 }}
+                />
+                
+                {/* Borboleta simplificada */}
+                <motion.g
+                  transform="translate(150, 150) scale(0.4)"
+                  initial={{ opacity: 0, rotate: -20 }}
+                  animate={{ opacity: 1, rotate: 0 }}
+                  transition={{ duration: 0.8, delay: 1.6 }}
+                >
+                  <path d="M0,0 C-50,-30 -100,-10 -80,40 C-70,80 -30,100 0,80 C30,100 70,80 80,40 C100,-10 50,-30 0,0" fill="#1DD3B0" opacity="0.9" />
+                  <line x1="0" y1="-10" x2="0" y2="90" stroke="white" strokeWidth="3" />
+                </motion.g>
+                
+                {/* Texto central */}
+                <motion.text
+                  x="150" y="250"
+                  fontSize="24"
+                  textAnchor="middle"
+                  fill="#5B2C91"
+                  fontWeight="bold"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 1.8 }}
+                >
+                  21 DIAS
+                </motion.text>
+                
+                <motion.text
+                  x="150" y="275"
+                  fontSize="16"
+                  textAnchor="middle"
+                  fill="#5B2C91"
+                  fontWeight="bold"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 2 }}
+                >
+                  DE TRANSFORMAÇÃO
+                </motion.text>
+              </motion.svg>
+              
               <motion.p 
-                className="mt-4 text-center text-purple-900 font-semibold"
+                className="mt-4 text-center text-purple-900 font-semibold px-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 2 }}
