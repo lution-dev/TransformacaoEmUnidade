@@ -44,9 +44,9 @@ const BookPreviewSection: React.FC = () => {
         <div className="mt-12">
           <a 
             href={PAYMENT_LINK} 
-            className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-8 py-4 rounded-full inline-block transition shadow-md hover:shadow-lg"
+            className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base rounded-full inline-flex justify-center items-center transition shadow-md hover:shadow-lg whitespace-nowrap max-w-[280px] sm:max-w-none mx-auto"
           >
-            Começar Minha Jornada de 21 Dias
+            Quero Comprar Agora
           </a>
           <p className="mt-4 text-sm opacity-90">
             Quantidade limitada de exemplares com desconto especial

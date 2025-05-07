@@ -37,9 +37,9 @@ const FinalCTA: React.FC = () => {
         
         <a 
           href={PAYMENT_LINK} 
-          className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-10 py-5 text-xl rounded-full inline-block transition shadow-lg hover:shadow-xl cta-pulse"
+          className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-6 sm:px-10 py-4 sm:py-5 text-lg sm:text-xl rounded-full inline-flex justify-center items-center transition shadow-lg hover:shadow-xl cta-pulse max-w-[280px] sm:max-w-none mx-auto whitespace-nowrap"
         >
-          Quero Transformar Minha Vida Agora
+          Quero Comprar Agora
         </a>
         
         <div className="mt-6 flex items-center justify-center flex-wrap gap-4">

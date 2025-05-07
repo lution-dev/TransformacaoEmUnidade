@@ -78,9 +78,9 @@ const HeroSection: React.FC = () => {
             
             <a 
               href={PAYMENT_LINK} 
-              className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-8 py-4 text-lg rounded-full inline-flex items-center transition shadow-md hover:shadow-lg cta-pulse"
+              className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg rounded-full inline-flex items-center justify-center transition shadow-md hover:shadow-lg cta-pulse whitespace-nowrap max-w-[280px] sm:max-w-none mx-auto sm:mx-0"
             >
-              <span>Quero Transformar Minha Vida</span>
+              <span>Quero Comprar Agora</span>
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             
