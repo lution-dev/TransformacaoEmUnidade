@@ -1,1 +1,1 @@
-export const PAYMENT_LINK = "https://pay.hotmart.com/E99478012S?off=80eip38b&_hi=eyJjaWQiOiIxNzEzOTc5MTA5MzMzNzc4MDU4NzQ1MDIyNjgxMjAwIiwiYmlkIjoiMTcxMzk3OTEwOTMzMzc3ODA1ODc0NTAyMjY4MTIwMCIsInNpZCI6ImE0NTc4NGFkZDE0NDQ3YjliOWM5NWFmMGY5OTc2NzlhIn0=.1746545485423&bid=1746545486402";
+export const PAYMENT_LINK = "https://transformaemunidade.lojavirtualnuvem.com.br/produtos/livro-transformacao-em-unidade";
