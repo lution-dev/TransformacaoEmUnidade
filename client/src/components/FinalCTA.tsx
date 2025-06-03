@@ -14,9 +14,9 @@ const FinalCTA: React.FC = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 flex flex-col items-center text-center max-w-xs">
             <div className="text-3xl font-montserrat font-bold mb-2 line-through text-gray-300">R$97,00</div>
-            <div className="text-5xl font-montserrat font-bold text-accent mb-4">R$39,90</div>
+            <div className="text-5xl font-montserrat font-bold text-accent mb-4">R$45,00</div>
             <p className="mb-2">Oferta por tempo limitado</p>
-            <p className="text-sm">Economia de 60%</p>
+            <p className="text-sm">Economia de 54%</p>
           </div>
           
           <div className="space-y-4">

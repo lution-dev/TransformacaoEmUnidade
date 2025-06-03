@@ -64,7 +64,7 @@ const FAQSection: React.FC = () => {
             href={PAYMENT_LINK} 
             className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-8 py-4 rounded-full inline-block transition shadow-md hover:shadow-lg"
           >
-            Adquirir Agora Por Apenas R$39,90
+            Adquirir Agora Por Apenas R$45,00
           </a>
           <p className="mt-4 text-gray-600">Oferta por tempo limitado - Preço original: R$97,00</p>
         </div>
