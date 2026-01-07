@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71.4% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 71.4% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71.4% 4.1%;
+    --primary: 273 53% 37%; /* purple */
+    --primary-foreground: 210 20% 98%;
+    --secondary: 173 74% 47%; /* turquoise */
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 84 100% 50%; /* lime green */
+    --accent-foreground: 273 53% 37%; /* purple for text on lime green */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 173 74% 47%; /* turquoise */
+    --sidebar-background: 273 53% 37%;
+    --sidebar-foreground: 210 20% 98%;
+    --sidebar-primary: 173 74% 47%;
+    --sidebar-primary-foreground: 220.9 39.3% 11%;
+    --sidebar-accent: 84 100% 50%;
+    --sidebar-accent-foreground: 273 53% 37%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 142.1 76.2% 36.3%;
+    --chart-1: 273 53% 37%;
+    --chart-2: 173 74% 47%;
+    --chart-3: 84 100% 50%;
+    --chart-4: 253 90% 70%;
+    --chart-5: 193 94% 77%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-opensans antialiased;
+  }
+
+  .font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-opensans {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  /* Custom Background Gradient */
+  .bg-gradient-main {
+    background: linear-gradient(135deg, #5B2C91 0%, #4B3A95 25%, #3D4E99 50%, #2A7FAD 75%, #1DD3B0 100%);
+  }
+
+  /* Butterfly Animation */
+  .butterfly {
+    position: absolute;
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  /* CTA Button Animation */
+  .cta-pulse {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(190, 255, 0, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(190, 255, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(190, 255, 0, 0); }
+  }
+
+  /* Fade In Animation */
+  .fade-in {
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* 3D Book Mockup Styles */
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  
+  .rotate-y-5 {
+    transform: rotateY(5deg);
+  }
+  
+  .book-cover {
+    position: relative;
+    z-index: 20;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg) rotateX(0deg);
+    transition: transform 0.5s ease;
+  }
+  
+  .book-spine {
+    z-index: 10;
+    transform-style: preserve-3d;
+  }
+  
+  .book-pages {
+    z-index: 5;
+    transform-style: preserve-3d;
+  }
+  
+  /* Animações para navegação */
+  .section-enter {
+    animation: sectionFadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes sectionFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Destaque para links ativos na navegação */
+  nav a.active-nav-link {
+    color: theme('colors.secondary.DEFAULT');
+    position: relative;
+  }
+  
+  nav a.active-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: theme('colors.secondary.DEFAULT');
+    transform: scaleX(0);
+    animation: underlineGrow 0.3s ease-out forwards;
+  }
+  
+  @keyframes underlineGrow {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+  }
+}
