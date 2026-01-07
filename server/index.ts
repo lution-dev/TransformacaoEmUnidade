@@ -56,10 +56,26 @@ app.use((req, res, next) => {
     serveStatic(app);
   }
 
-  // Serve the app on port 5000
+  // Serve the app on a port, starting with 5000
   // this serves both the API and the client.
-  const port = 5000;
-  server.listen(port, "0.0.0.0", () => {
-    log(`serving on port ${port}`);
-  });
+  const startPort = 5000;
+  const maxPort = 5100;
+
+  const tryListen = (port: number): void => {
+    server.listen(port, "0.0.0.0", () => {
+      log(`serving on port ${port}`);
+    });
+
+    server.once("error", (err: NodeJS.ErrnoException) => {
+      if (err.code === "EADDRINUSE" && port < maxPort) {
+        log(`Port ${port} in use, trying ${port + 1}...`);
+        server.close();
+        tryListen(port + 1);
+      } else {
+        throw err;
+      }
+    });
+  };
+
+  tryListen(startPort);
 })();
