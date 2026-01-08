@@ -16,7 +16,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       description: "Descubra uma vida saudável, equilibrada e plena que Deus sonhou para você. Aprenda a emagrecer de dentro para fora e viva em harmonia.",
       price: {
         original: 97.00,
-        current: 45.00,
+        current: 59.90,
         discount: "54%"
       },
       programLength: "21 dias",

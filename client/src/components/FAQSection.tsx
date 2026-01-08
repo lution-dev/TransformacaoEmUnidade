@@ -43,7 +43,7 @@ const FAQSection: React.FC = () => {
             Encontre respostas para as dúvidas mais comuns sobre o livro "Transformação em Unidade"
           </p>
         </div>
-        
+
         <div className="max-w-3xl mx-auto space-y-6">
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
@@ -58,13 +58,13 @@ const FAQSection: React.FC = () => {
             ))}
           </Accordion>
         </div>
-        
+
         <div className="text-center mt-12">
-          <a 
-            href={PAYMENT_LINK} 
+          <a
+            href={PAYMENT_LINK}
             className="bg-accent hover:bg-opacity-90 text-accent-foreground font-montserrat font-bold px-8 py-4 rounded-full inline-block transition shadow-md hover:shadow-lg"
           >
-            Adquirir Agora Por Apenas R$45,00
+            Adquirir Agora Por Apenas R$59,90
           </a>
           <p className="mt-4 text-gray-600">Oferta por tempo limitado - Preço original: R$97,00</p>
         </div>
